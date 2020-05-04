@@ -38,27 +38,6 @@
 			</list>
 		</property>
 	</bean>
-	<!-- cvs는 안 쓰니까 주석처리함. 
-	<bean id="cvsFileItemWriter" class="org.springframework.batch.item.file.FlatFileItemWriter">
-
-		write to this csv file
-		<property name="resource" value="file:cvs/report.csv" />
-		<property name="shouldDeleteIfExists" value="true" />
-
-		<property name="lineAggregator">
-			<bean
-				class="org.springframework.batch.item.file.transform.DelimitedLineAggregator">
-				<property name="delimiter" value="," />
-				<property name="fieldExtractor">
-					<bean
-						class="org.springframework.batch.item.file.transform.BeanWrapperFieldExtractor">
-						<property name="names" value="refId, name, age, csvDob, income" />
-					</bean>
-				</property>
-			</bean>
-		</property>
-		
-	</bean> -->
 	
 	<bean id="mysqlItemWriter"
 		class="org.springframework.batch.item.database.JdbcBatchItemWriter">
@@ -81,9 +60,6 @@
 
 	<!-- Run every 5 seconds -->
 	<task:scheduled-tasks>
-		<!-- 다른 cron 방법 
-		<task:scheduled ref="runScheduler" method="run" fixed-delay="5000" /> 
-		-->
 		<task:scheduled ref="runScheduler" method="run"
 			cron="*/20 * * * * *" />
 	</task:scheduled-tasks>
