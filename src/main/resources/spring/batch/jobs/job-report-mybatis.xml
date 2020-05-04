@@ -42,12 +42,7 @@
 	<bean id="mysqlItemWriter"
 		class="org.mybatis.spring.batch.MyBatisBatchItemWriter">
 		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
-		<property name="sql" ref="com.batch.mybatis.MybatisMapper.insert"/>
-		<!-- It will take care matching between object property and sql name parameter -->
-		<property name="itemSqlParameterSourceProvider">
-			<bean
-				class="org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider" />
-		</property>
+		<property name="statementId" value="spring.batch.mybatis_mapper.insert"/>
 	</bean>
 	
 	<bean id="runScheduler" class="com.batch.RunScheduler" />
@@ -55,7 +50,7 @@
 	<!-- Run every 5 seconds -->
 	<task:scheduled-tasks>
 		<task:scheduled ref="runScheduler" method="run"
-			cron="*/20 * * * * *" />
+			cron="*/5 * * * * *" />
 	</task:scheduled-tasks>
 
 </beans>

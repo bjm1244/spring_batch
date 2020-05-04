@@ -23,7 +23,7 @@
 	<jdbc:initialize-database data-source="dataSource">
 		<jdbc:script location="classpath:sql/create_table.sql"/>
 		<jdbc:script location="classpath:sql/schema_mysql.sql"/>
-		<!-- DB가 이미 존재하는데, 아무것도 존재하지 않을시 오류 뜸 그러나 없으면, 0부터 시작해서 이후 실행이 되지않음. -->
+		<!-- DB가 이미 존재하는데, 아무것도 존재하지 않을시 오류 뜸 그러나 없으면, 0부터 시작해서 이후 실행이 되지않음. 실패한 것만 남을시 오류 -->
 		<jdbc:script location="classpath:sql/insert_schema_mysql.sql"/>
 		<!-- batch.core 안에 있는 배치 로그 DB 삭제 혹은 생성하는 쿼리 
 		<jdbc:script location="org/springframework/batch/core/schema-drop-mysql.sql" />
