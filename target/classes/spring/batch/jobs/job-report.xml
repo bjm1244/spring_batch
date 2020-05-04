@@ -32,7 +32,7 @@
 	<bean id="reportUnmarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
 		<property name="classesToBeBound">
 			<list>
-				<value>com.batch.model.Report</value>
+				<value>com.batch.model.VO</value>
 			</list>
 		</property>
 	</bean>

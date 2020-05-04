@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(name = "record")
-public class Report {
+public class VO {
 
 	private int refId;
 	private String name;
