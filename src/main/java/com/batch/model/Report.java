@@ -1,4 +1,4 @@
-package com.mkyong.model;
+package com.batch.model;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -10,8 +10,6 @@ public class Report {
 	private int refId;
 	private String name;
 	private int age;
-//	private Date dob;
-//	private BigDecimal income;
 
 	@XmlAttribute(name = "refId")
 	public int getRefId() {
@@ -39,33 +37,5 @@ public class Report {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-//	@XmlJavaTypeAdapter(JaxbDateAdapter.class)
-//	@XmlElement
-//	public Date getDob() {
-//		return dob;
-//	}
-//
-//	public void setDob(Date dob) {
-//		this.dob = dob;
-//	}
-//
-//	@XmlJavaTypeAdapter(JaxbBigDecimalAdapter.class)
-//	@XmlElement
-//	public BigDecimal getIncome() {
-//		return income;
-//	}
-//
-//	public void setIncome(BigDecimal income) {
-//		this.income = income;
-//	}
-
-	// for csv demo only
-//	public String getCsvDob() {
-//
-//		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-//		return dateFormat.format(getDob());
-//
-//	}
 
 }
