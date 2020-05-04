@@ -12,7 +12,8 @@ public class App {
 			{	
 				"spring/batch/config/database.xml",
 				"spring/batch/config/context.xml",
-				"spring/batch/jobs/job-report.xml"
+				"spring/batch/jobs/job-report.xml",
+//				"spring/batch/config/mybatis_mapper.xml"
 			};
 		
 		ApplicationContext context = 
