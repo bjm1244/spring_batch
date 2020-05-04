@@ -21,9 +21,7 @@
 			</batch:tasklet>
 		</batch:step>
 	</batch:job>
-
-	<!-- <bean id="filterReportProcessor" class="com.mkyong.processor.FilterReportProcessor" /> -->
-
+	
 	<bean id="xmlItemReader" class="org.springframework.batch.item.xml.StaxEventItemReader">
 		<property name="fragmentRootElementName" value="record" />
 		<property name="resource" value="classpath:xml/report.xml" />
