@@ -12,8 +12,8 @@
 		<!-- <property name="driverClassName" value="com.mysql.jdbc.Driver" /> : 구버젼--> 
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> <!-- 8버젼 이후 -->
 		<property name="url" value="jdbc:mysql://localhost:3306/test?serverTimezone=UTC" />
-		<property name="username" value="bjm" />
-		<property name="password" value="111222" />
+		<property name="username" value="" />
+		<property name="password" value="" />
 	</bean>
 	
 	<!-- spring transaction -->
