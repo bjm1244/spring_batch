@@ -16,20 +16,15 @@
 		<batch:step id="step1">
 			<batch:tasklet>
 				<batch:chunk reader="xmlItemReader" writer="mysqlItemWriter"
-					commit-interval="1" retry-limit="3">
-					<batch:retryable-exception-classes>
-          				<batch:include class="org.springframework.dao.DeadlockLoserDataAccessException"/>
-         			</batch:retryable-exception-classes>
+					commit-interval="1">
 				</batch:chunk>
-				<batch:transaction-attributes timeout="30"/>
 			</batch:tasklet>
 		</batch:step>
 	</batch:job>
 	
-	
 	<bean id="xmlItemReader" class="org.springframework.batch.item.xml.StaxEventItemReader">
 		<property name="fragmentRootElementName" value="record" />
-		<property name="resource" value="http://localhost:8888/report.xml" />
+		<property name="resource" value="classpath:xml/report.xml" />
 		<property name="unmarshaller" ref="reportUnmarshaller" />
 	</bean>
 
