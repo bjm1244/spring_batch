@@ -9,9 +9,10 @@
 		- eclipse+spring development tool
 		- spring 환경 : 각 프로젝트 pom.xml 참고
 	- API server
-		- java model 기반으로 객체 생성 시 xml로 보여주는 spring mvc 더비 api 서버 만듦
-		- api 요청이 시간이 소요 되거난 혹은 공공데이터에서는 키를 받았음에도 인증받지 못한 키로 인식을 못하기에 만듦
+		- java model 기반으로 객체 생성 시 xml로 보여주는 spring mvc 더비 api 서버
+		- API 요청이 시간이 소요 되거난 혹은 공공데이터에서는 키를 받았음에도 인증받지 못한 키로 인식을 못하기에 만듦
 	- Spring batch
+		- API주소를 받아 mysql에 업로드 하는 batch 프로그램
 		- App에서 jobLauncher, job 빈 주입 받음
 		- RunScheduler에서 job 작동
 		- RunScheduler가 작동 하기 위해 job, dataSource, context.xml 설정
@@ -20,6 +21,7 @@
 			- Writer : 매핑된 데이터를 Mysql로 업로드
 		- 더미데이터 : mybatis 연동, reader 자바 파일, api용 자바 파일
 	- Mysql
+		- Spring batch의 Writer를 통해 데이터가 업로드 되는 DB
 		- Job 관련 로그
 			- dataSource.xml에서 jdbc:script로 작동
 				- 테이블 생성(테이블 유무에 따라)
