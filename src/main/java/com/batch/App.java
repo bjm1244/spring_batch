@@ -16,6 +16,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * insert_schema_mysql.sql 미완성
  * 	- 모두 실패 한 것 일 시 오류 뜸. 
  * 	- DB 만든 후 task 실행 안하고, 끈 후 다시 실행 할 시 오류
+ * 0505
+ * reader를 자바파일로 만들어서 읽는것 해보는 중 
  */
 public class App {
 	public static void main(String[] args) {
