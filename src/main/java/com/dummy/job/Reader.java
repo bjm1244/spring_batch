@@ -1,4 +1,4 @@
-package com.batch.job;
+package com.dummy.job;
 
 import org.springframework.batch.item.xml.StaxEventItemReader;
 import org.springframework.context.annotation.Bean;

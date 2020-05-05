@@ -24,8 +24,6 @@ public class App {
 
 		String[] springConfig  = 
 			{	
-//				mybatis 되지않아 주석처리함.
-//				"spring/batch/config/mybatis_mapper.xml",
 				"spring/batch/config/database.xml",
 				"spring/batch/config/context.xml",
 				"spring/batch/jobs/job-report.xml"

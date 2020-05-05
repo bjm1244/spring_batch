@@ -1,4 +1,4 @@
-package com.batch.mybatis;
+package com.dummy.mybatis;
 
 import com.batch.model.VO;
 

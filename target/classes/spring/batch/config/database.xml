@@ -15,7 +15,8 @@
 		<property name="username" value="bjm" />
 		<property name="password" value="111222" />
 	</bean>
-
+	
+	<!-- spring transaction -->
 	<bean id="transactionManager"
 		class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
 	
